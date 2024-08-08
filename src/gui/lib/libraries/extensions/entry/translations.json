@@ -1,0 +1,14 @@
+{
+  "en": {
+    "ambient.entry.name": "Ambient",
+    "ambient.entry.description": "Description of this extension"
+  },
+  "ja": {
+    "ambient.entry.name": "Ambient",
+    "ambient.entry.description": "拡張機能の説明"
+  },
+  "ja-Hira": {
+    "ambient.entry.name": "Ambient",
+    "ambient.entry.description": "かくちょうきのうのせつめい"
+  }
+}

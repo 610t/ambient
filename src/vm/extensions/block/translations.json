@@ -1,0 +1,14 @@
+{
+  "en": {
+    "ambient.name": "Ambient",
+    "ambient.doIt": "do it [SCRIPT]"
+  },
+  "ja": {
+    "ambient.name": "Ambient",
+    "ambient.doIt": "[SCRIPT] を実行する"
+  },
+  "ja-Hira": {
+    "ambient.name": "Ambient",
+    "ambient.doIt": "[SCRIPT] をじっこうする"
+  }
+}
