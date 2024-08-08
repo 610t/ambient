@@ -1,0 +1,2 @@
+# ambient
+Ambient for Scratch.
