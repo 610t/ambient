@@ -113,19 +113,23 @@ class ExtensionBlocks {
             showStatusButton: false,
             blocks: [
                 {
-                    opcode: 'do-it',
-                    blockType: BlockType.REPORTER,
+                    opcode: 'ambientInit',
+                    blockType: BlockType.COMMAND,
                     blockAllThreads: false,
                     text: formatMessage({
-                        id: 'ambient.doIt',
-                        default: 'do it [SCRIPT]',
-                        description: 'execute javascript for example'
+                        id: 'ambient.init',
+                        default: 'Init Channel ID: [CHANNELID] Write Key: [WRITEKEY]',
+                        description: 'Initialize Ambient'
                     }),
-                    func: 'doIt',
+                    func: 'ambientInit',
                     arguments: {
-                        SCRIPT: {
+                        CHANNELID: {
                             type: ArgumentType.STRING,
-                            defaultValue: '3 + 4'
+                            defaultValue: 'Channel ID'
+                        },
+                        WRITEKEY: {
+                            type: ArgumentType.STRING,
+                            defaultValue: 'Write Key'
                         }
                     }
                 }
@@ -135,11 +139,7 @@ class ExtensionBlocks {
         };
     }
 
-    doIt (args) {
-        const statement = Cast.toString(args.SCRIPT);
-        const func = new Function(`return (${statement})`);
-        log.log(`doIt: ${statement}`);
-        return func.call(this);
+    ambientInit (args) {
     }
 }
 
