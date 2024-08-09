@@ -132,14 +132,45 @@ class ExtensionBlocks {
                             defaultValue: 'Write Key'
                         }
                     }
+                },
+                {
+                    opcode: 'ambientSetData',
+                    blockType: BlockType.COMMAND,
+                    blockAllThreads: false,
+                    text: formatMessage({
+                        id: 'ambient.setData',
+                        default: 'Set [DATA] at [DATANUM]',
+                        description: 'Set data for ambient'
+                    }),
+                    func: 'ambientSetData',
+                    arguments: {
+                        DATANUM: {
+                            type: ArgumentType.STRING,
+                            // type: ArgumentType.NUMBER,
+                            menu: 'ambientDataNumMenu'
+                        },
+                        DATA: {
+                            type: ArgumentType.NUMBER,
+                            defaultValue: 0
+                        }
+                    }
                 }
+
             ],
             menus: {
+                ambientDataNumMenu: {
+                    acceptReporters: false,
+                    items: ['d1','d2','d3','d4','d5','d6','d7','d8']
+                    // items: ['1','2','3','4','5','6','7','8']
+                }
             }
         };
     }
 
     ambientInit (args) {
+    }
+
+    ambientSetData (args) {
     }
 }
 
