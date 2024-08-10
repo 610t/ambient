@@ -5,6 +5,11 @@ import log from '../../util/log';
 import translations from './translations.json';
 import blockIcon from './block-icon.png';
 
+import Ambient from 'ambient-lib'
+
+let ambient = new Ambient('dummy', 'dummy')
+let ambientData = {}
+
 /**
  * Formatter which is used for translation.
  * This will be replaced which is used in the runtime.
@@ -146,7 +151,6 @@ class ExtensionBlocks {
                     arguments: {
                         DATANUM: {
                             type: ArgumentType.STRING,
-                            // type: ArgumentType.NUMBER,
                             menu: 'ambientDataNumMenu'
                         },
                         DATA: {
@@ -154,23 +158,60 @@ class ExtensionBlocks {
                             defaultValue: 0
                         }
                     }
+                },
+                {
+                    opcode: 'ambientSend',
+                    blockType: BlockType.COMMAND,
+                    blockAllThreads: false,
+                    text: formatMessage({
+                        id: 'ambient.send',
+                        default: 'Send data',
+                        description: 'Send data for ambient'
+                    }),
+                    func: 'ambientSend'
+                },
+                {
+                    opcode: 'ambientClear',
+                    blockAllThreads: false,
+                    text: formatMessage({
+                        id: 'ambient.clear',
+                        default: 'Clear data',
+                        description: 'Clear data for ambient'
+                    }),
+                    func: 'ambientClear'
                 }
-
             ],
             menus: {
                 ambientDataNumMenu: {
                     acceptReporters: false,
                     items: ['d1','d2','d3','d4','d5','d6','d7','d8']
-                    // items: ['1','2','3','4','5','6','7','8']
                 }
             }
         };
     }
 
     ambientInit (args) {
+        ambient = new Ambient(args.CHANNELID, args.WRITEKEY)
     }
 
     ambientSetData (args) {
+        let dataNum = args.DATANUM
+        let data = args.DATA
+        ambientData[dataNum] = data
+    }
+
+    ambientSend (args) {
+        ambient.send(ambientData, function(err, res, body) {
+            if (err) {
+                console.log(err);
+            }
+            console.log(res.statusCode);
+        })
+        ambientData={}
+    }
+
+    ambientClear (args) {
+        ambientData={}
     }
 }
 
