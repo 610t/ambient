@@ -32,5 +32,9 @@
     "rollup": "^4.12.1",
     "rollup-plugin-node-globals": "^1.4.0",
     "rollup-plugin-polyfill-node": "^0.13.0"
+  },
+  "dependencies": {
+    "ambient-lib": "^1.0.4",
+    "minilog": "^3.1.0"
   }
 }
