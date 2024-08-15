@@ -747,18 +747,27 @@ minilog('vm');
 
 var en = {
 	"ambient.name": "Ambient",
-	"ambient.doIt": "do it [SCRIPT]"
+	"ambient.init": "Init Channel ID: [CHANNELID] Write Key: [WRITEKEY]",
+	"ambient.setData": "Set [DATA] at [DATANUM]",
+	"ambient.send": "Send data",
+	"ambient.clear": "Clear data"
 };
 var ja = {
 	"ambient.name": "Ambient",
-	"ambient.doIt": "[SCRIPT] を実行する"
+	"ambient.init": "Channel ID: [CHANNELID] Write Key: [WRITEKEY]で初期化",
+	"ambient.setData": "データ[DATANUM]を[DATA]にする",
+	"ambient.send": "データを送る",
+	"ambient.clear": "データを削除"
 };
 var translations = {
 	en: en,
 	ja: ja,
 	"ja-Hira": {
 	"ambient.name": "Ambient",
-	"ambient.doIt": "[SCRIPT] をじっこうする"
+	"ambient.init": "Channel ID: [CHANNELID] Write Key: [WRITEKEY]でしょきか",
+	"ambient.setData": "でーた[DATANUM]を[DATA]にする",
+	"ambient.send": "データをおくる",
+	"ambient.clear": "データをけす"
 }
 };
 

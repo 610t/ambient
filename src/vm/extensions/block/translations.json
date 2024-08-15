@@ -1,14 +1,23 @@
 {
   "en": {
     "ambient.name": "Ambient",
-    "ambient.doIt": "do it [SCRIPT]"
+    "ambient.init": "Init Channel ID: [CHANNELID] Write Key: [WRITEKEY]",
+    "ambient.setData": "Set [DATA] at [DATANUM]",
+    "ambient.send": "Send data",
+    "ambient.clear": "Clear data"
   },
   "ja": {
     "ambient.name": "Ambient",
-    "ambient.doIt": "[SCRIPT] を実行する"
+    "ambient.init": "Channel ID: [CHANNELID] Write Key: [WRITEKEY]で初期化",
+    "ambient.setData": "データ[DATANUM]を[DATA]にする",
+    "ambient.send": "データを送る",
+    "ambient.clear": "データを削除"
   },
   "ja-Hira": {
     "ambient.name": "Ambient",
-    "ambient.doIt": "[SCRIPT] をじっこうする"
+    "ambient.init": "Channel ID: [CHANNELID] Write Key: [WRITEKEY]でしょきか",
+    "ambient.setData": "でーた[DATANUM]を[DATA]にする",
+    "ambient.send": "データをおくる",
+    "ambient.clear": "データをけす"
   }
 }
