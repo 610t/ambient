@@ -1,5 +1,5 @@
 # ambient
-Ambient for Scratch.
+[Ambient](https://ambidata.io/) for Scratch.
 
 ## How to use
 For using this extension, please use [xcratch](https://xcratch.github.io/editor/).
