@@ -1,4 +1,6 @@
 # ambient
+![Header](img/Header.png)
+
 [Ambient](https://ambidata.io/) for Scratch.
 
 ## How to use
